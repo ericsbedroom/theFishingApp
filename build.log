@@ -1,28 +1,59 @@
 Logfile initialized
-[INFO] logfile = C:\Users\Ericiscool\Documents\Titanium_Studio_Workspace\The Fishing App\build.log
-[DEBUG] C:\Users\Ericiscool\AppData\Roaming\Titanium\mobilesdk\win32\3.1.1.GA\android\builder.py install practice C:\Android SDK\sdk C:\Users\Ericiscool\Documents\Titanium_Studio_Workspace\The Fishing App com.eric.myapp 24
+[INFO] logfile = C:\Users\Ericiscool\Documents\Titanium_Studio_Workspace\theFishingAppGit\build.log
+[DEBUG] C:\Users\Ericiscool\AppData\Roaming\Titanium\mobilesdk\win32\3.1.1.GA\android\builder.py install The Fishing App C:\Android SDK\sdk C:\Users\Ericiscool\Documents\Titanium_Studio_Workspace\theFishingAppGit com.eric.myapp 24
 [INFO] Titanium SDK version: 3.1.1 (06/15/13 16:09 f7592c1)
 [DEBUG] Waiting for device to be ready ...
 [TRACE] adb devices returned 1 devices/emulators
 [DEBUG] Device connected... (waited 0 seconds)
-[DEBUG] waited 0.047000 seconds on emulator to get ready
+[DEBUG] waited 0.025000 seconds on emulator to get ready
 [DEBUG] com.eric.myapp installed? True
 [INFO] Copying CommonJS modules...
 [INFO] Copying project resources..
+[INFO] Detected change in tiapp.xml, or assets deleted. Forcing full re-build...
+[TRACE] COPYING CREATED FILE: C:\Users\Ericiscool\Documents\Titanium_Studio_Workspace\theFishingAppGit\Resources\android\appicon.png => C:\Users\Ericiscool\Documents\Titanium_Studio_Workspace\theFishingAppGit\build\android\bin\assets\Resources\appicon.png
+[TRACE] COPYING CREATED FILE: C:\Users\Ericiscool\Documents\Titanium_Studio_Workspace\theFishingAppGit\Resources\android\default.png => C:\Users\Ericiscool\Documents\Titanium_Studio_Workspace\theFishingAppGit\build\android\bin\assets\Resources\default.png
+[TRACE] COPYING CREATED FILE: C:\Users\Ericiscool\Documents\Titanium_Studio_Workspace\theFishingAppGit\Resources\android\Thumbs.db => C:\Users\Ericiscool\Documents\Titanium_Studio_Workspace\theFishingAppGit\build\android\bin\assets\Resources\Thumbs.db
+[TRACE] COPYING CREATED FILE: C:\Users\Ericiscool\Documents\Titanium_Studio_Workspace\theFishingAppGit\Resources\app.js => C:\Users\Ericiscool\Documents\Titanium_Studio_Workspace\theFishingAppGit\build\android\bin\assets\Resources\app.js
+[TRACE] COPYING CREATED FILE: C:\Users\Ericiscool\Documents\Titanium_Studio_Workspace\theFishingAppGit\Resources\KS_nav_ui.png => C:\Users\Ericiscool\Documents\Titanium_Studio_Workspace\theFishingAppGit\build\android\bin\assets\Resources\KS_nav_ui.png
+[TRACE] COPYING CREATED FILE: C:\Users\Ericiscool\Documents\Titanium_Studio_Workspace\theFishingAppGit\Resources\KS_nav_views.png => C:\Users\Ericiscool\Documents\Titanium_Studio_Workspace\theFishingAppGit\build\android\bin\assets\Resources\KS_nav_views.png
+[TRACE] COPYING CREATED FILE: C:\Users\Ericiscool\Documents\Titanium_Studio_Workspace\theFishingAppGit\Resources\testWindow.js => C:\Users\Ericiscool\Documents\Titanium_Studio_Workspace\theFishingAppGit\build\android\bin\assets\Resources\testWindow.js
 [DEBUG] LiveView not enabled
-[INFO] Tiapp.xml unchanged, skipping class generation
+[TRACE] Generating Java Classes
 [DEBUG] Processing Android resource drawables
-[DEBUG] found drawable-long-land-hdpi splash screen at C:\Users\Ericiscool\Documents\Titanium_Studio_Workspace\The Fishing App\Resources\android\images\res-long-land-hdpi\default.png
-[DEBUG] found drawable-long-land-ldpi splash screen at C:\Users\Ericiscool\Documents\Titanium_Studio_Workspace\The Fishing App\Resources\android\images\res-long-land-ldpi\default.png
-[DEBUG] found drawable-long-port-hdpi splash screen at C:\Users\Ericiscool\Documents\Titanium_Studio_Workspace\The Fishing App\Resources\android\images\res-long-port-hdpi\default.png
-[DEBUG] found drawable-long-port-ldpi splash screen at C:\Users\Ericiscool\Documents\Titanium_Studio_Workspace\The Fishing App\Resources\android\images\res-long-port-ldpi\default.png
-[DEBUG] found drawable-notlong-land-hdpi splash screen at C:\Users\Ericiscool\Documents\Titanium_Studio_Workspace\The Fishing App\Resources\android\images\res-notlong-land-hdpi\default.png
-[DEBUG] found drawable-notlong-land-ldpi splash screen at C:\Users\Ericiscool\Documents\Titanium_Studio_Workspace\The Fishing App\Resources\android\images\res-notlong-land-ldpi\default.png
-[DEBUG] found drawable-notlong-land-mdpi splash screen at C:\Users\Ericiscool\Documents\Titanium_Studio_Workspace\The Fishing App\Resources\android\images\res-notlong-land-mdpi\default.png
-[DEBUG] found drawable-notlong-port-hdpi splash screen at C:\Users\Ericiscool\Documents\Titanium_Studio_Workspace\The Fishing App\Resources\android\images\res-notlong-port-hdpi\default.png
-[DEBUG] found drawable-notlong-port-ldpi splash screen at C:\Users\Ericiscool\Documents\Titanium_Studio_Workspace\The Fishing App\Resources\android\images\res-notlong-port-ldpi\default.png
-[DEBUG] found drawable-notlong-port-mdpi splash screen at C:\Users\Ericiscool\Documents\Titanium_Studio_Workspace\The Fishing App\Resources\android\images\res-notlong-port-mdpi\default.png
-[DEBUG] creating unsigned apk: C:\Users\Ericiscool\Documents\Titanium_Studio_Workspace\The Fishing App\build\android\bin\app-unsigned.apk
+[DEBUG] app stylesheet => C:\Users\Ericiscool\Documents\Titanium_Studio_Workspace\theFishingAppGit\build\android\gen\com\eric\myapp\ApplicationStylesheet.java
+[DEBUG] copying app icon: C:\Users\Ericiscool\Documents\Titanium_Studio_Workspace\theFishingAppGit\build\android\bin\assets\Resources\appicon.png
+[DEBUG] generating theme.xml
+[DEBUG] found drawable-long-land-hdpi splash screen at C:\Users\Ericiscool\Documents\Titanium_Studio_Workspace\theFishingAppGit\Resources\android\images\res-long-land-hdpi\default.png
+[DEBUG] copying C:\Users\Ericiscool\Documents\Titanium_Studio_Workspace\theFishingAppGit\Resources\android\images\res-long-land-hdpi\default.png splash screen to C:\Users\Ericiscool\Documents\Titanium_Studio_Workspace\theFishingAppGit\build\android\res\drawable-long-land-hdpi\background.png
+[DEBUG] found drawable-long-land-ldpi splash screen at C:\Users\Ericiscool\Documents\Titanium_Studio_Workspace\theFishingAppGit\Resources\android\images\res-long-land-ldpi\default.png
+[DEBUG] copying C:\Users\Ericiscool\Documents\Titanium_Studio_Workspace\theFishingAppGit\Resources\android\images\res-long-land-ldpi\default.png splash screen to C:\Users\Ericiscool\Documents\Titanium_Studio_Workspace\theFishingAppGit\build\android\res\drawable-long-land-ldpi\background.png
+[DEBUG] found drawable-long-port-hdpi splash screen at C:\Users\Ericiscool\Documents\Titanium_Studio_Workspace\theFishingAppGit\Resources\android\images\res-long-port-hdpi\default.png
+[DEBUG] copying C:\Users\Ericiscool\Documents\Titanium_Studio_Workspace\theFishingAppGit\Resources\android\images\res-long-port-hdpi\default.png splash screen to C:\Users\Ericiscool\Documents\Titanium_Studio_Workspace\theFishingAppGit\build\android\res\drawable-long-port-hdpi\background.png
+[DEBUG] found drawable-long-port-ldpi splash screen at C:\Users\Ericiscool\Documents\Titanium_Studio_Workspace\theFishingAppGit\Resources\android\images\res-long-port-ldpi\default.png
+[DEBUG] copying C:\Users\Ericiscool\Documents\Titanium_Studio_Workspace\theFishingAppGit\Resources\android\images\res-long-port-ldpi\default.png splash screen to C:\Users\Ericiscool\Documents\Titanium_Studio_Workspace\theFishingAppGit\build\android\res\drawable-long-port-ldpi\background.png
+[DEBUG] found drawable-notlong-land-hdpi splash screen at C:\Users\Ericiscool\Documents\Titanium_Studio_Workspace\theFishingAppGit\Resources\android\images\res-notlong-land-hdpi\default.png
+[DEBUG] copying C:\Users\Ericiscool\Documents\Titanium_Studio_Workspace\theFishingAppGit\Resources\android\images\res-notlong-land-hdpi\default.png splash screen to C:\Users\Ericiscool\Documents\Titanium_Studio_Workspace\theFishingAppGit\build\android\res\drawable-notlong-land-hdpi\background.png
+[DEBUG] found drawable-notlong-land-ldpi splash screen at C:\Users\Ericiscool\Documents\Titanium_Studio_Workspace\theFishingAppGit\Resources\android\images\res-notlong-land-ldpi\default.png
+[DEBUG] copying C:\Users\Ericiscool\Documents\Titanium_Studio_Workspace\theFishingAppGit\Resources\android\images\res-notlong-land-ldpi\default.png splash screen to C:\Users\Ericiscool\Documents\Titanium_Studio_Workspace\theFishingAppGit\build\android\res\drawable-notlong-land-ldpi\background.png
+[DEBUG] found drawable-notlong-land-mdpi splash screen at C:\Users\Ericiscool\Documents\Titanium_Studio_Workspace\theFishingAppGit\Resources\android\images\res-notlong-land-mdpi\default.png
+[DEBUG] copying C:\Users\Ericiscool\Documents\Titanium_Studio_Workspace\theFishingAppGit\Resources\android\images\res-notlong-land-mdpi\default.png splash screen to C:\Users\Ericiscool\Documents\Titanium_Studio_Workspace\theFishingAppGit\build\android\res\drawable-notlong-land-mdpi\background.png
+[DEBUG] found drawable-notlong-port-hdpi splash screen at C:\Users\Ericiscool\Documents\Titanium_Studio_Workspace\theFishingAppGit\Resources\android\images\res-notlong-port-hdpi\default.png
+[DEBUG] copying C:\Users\Ericiscool\Documents\Titanium_Studio_Workspace\theFishingAppGit\Resources\android\images\res-notlong-port-hdpi\default.png splash screen to C:\Users\Ericiscool\Documents\Titanium_Studio_Workspace\theFishingAppGit\build\android\res\drawable-notlong-port-hdpi\background.png
+[DEBUG] found drawable-notlong-port-ldpi splash screen at C:\Users\Ericiscool\Documents\Titanium_Studio_Workspace\theFishingAppGit\Resources\android\images\res-notlong-port-ldpi\default.png
+[DEBUG] copying C:\Users\Ericiscool\Documents\Titanium_Studio_Workspace\theFishingAppGit\Resources\android\images\res-notlong-port-ldpi\default.png splash screen to C:\Users\Ericiscool\Documents\Titanium_Studio_Workspace\theFishingAppGit\build\android\res\drawable-notlong-port-ldpi\background.png
+[DEBUG] found drawable-notlong-port-mdpi splash screen at C:\Users\Ericiscool\Documents\Titanium_Studio_Workspace\theFishingAppGit\Resources\android\images\res-notlong-port-mdpi\default.png
+[DEBUG] copying C:\Users\Ericiscool\Documents\Titanium_Studio_Workspace\theFishingAppGit\Resources\android\images\res-notlong-port-mdpi\default.png splash screen to C:\Users\Ericiscool\Documents\Titanium_Studio_Workspace\theFishingAppGit\build\android\res\drawable-notlong-port-mdpi\background.png
+[DEBUG] found splash screen at C:\Users\Ericiscool\Documents\Titanium_Studio_Workspace\theFishingAppGit\build\android\bin\assets\Resources\default.png
+[TRACE] Writing out AndroidManifest.xml
+[DEBUG] adding C:\Users\Ericiscool\Documents\Titanium_Studio_Workspace\theFishingAppGit\build\android\gen\com\eric\myapp\ApplicationStylesheet.java to javac build list
+[DEBUG] adding C:\Users\Ericiscool\Documents\Titanium_Studio_Workspace\theFishingAppGit\build\android\gen\com\eric\myapp\R.java to javac build list
+[DEBUG] adding C:\Users\Ericiscool\Documents\Titanium_Studio_Workspace\theFishingAppGit\build\android\gen\com\eric\myapp\TheFishingAppActivity.java to javac build list
+[DEBUG] adding C:\Users\Ericiscool\Documents\Titanium_Studio_Workspace\theFishingAppGit\build\android\gen\com\eric\myapp\TheFishingAppAppInfo.java to javac build list
+[DEBUG] adding C:\Users\Ericiscool\Documents\Titanium_Studio_Workspace\theFishingAppGit\build\android\gen\com\eric\myapp\TheFishingAppApplication.java to javac build list
+[DEBUG] Building Java Sources: "C:\\Users\\Ericiscool\\Documents\\Titanium_Studio_Workspace\\theFishingAppGit\\build\\android\\gen\\com\\eric\\myapp\\ApplicationStylesheet.java" "C:\\Users\\Ericiscool\\Documents\\Titanium_Studio_Workspace\\theFishingAppGit\\build\\android\\gen\\com\\eric\\myapp\\R.java" "C:\\Users\\Ericiscool\\Documents\\Titanium_Studio_Workspace\\theFishingAppGit\\build\\android\\gen\\com\\eric\\myapp\\TheFishingAppActivity.java" "C:\\Users\\Ericiscool\\Documents\\Titanium_Studio_Workspace\\theFishingAppGit\\build\\android\\gen\\com\\eric\\myapp\\TheFishingAppAppInfo.java" "C:\\Users\\Ericiscool\\Documents\\Titanium_Studio_Workspace\\theFishingAppGit\\build\\android\\gen\\com\\eric\\myapp\\TheFishingAppApplication.java"
+[INFO] Compiling Android Resources... This could take some time
+[DEBUG] Android classes.dex built
+[DEBUG] creating unsigned apk: C:\Users\Ericiscool\Documents\Titanium_Studio_Workspace\theFishingAppGit\build\android\bin\app-unsigned.apk
 [DEBUG] from resource zip => assets/Resources/KS_nav_ui.png
 [DEBUG] from resource zip => assets/Resources/KS_nav_views.png
 [DEBUG] from resource zip => assets/Resources/app.js
@@ -76,6 +107,6 @@ Logfile initialized
 [DEBUG] Waiting for device to be ready ...
 [TRACE] adb devices returned 1 devices/emulators
 [DEBUG] Device connected... (waited 0 seconds)
-[DEBUG] waited 0.032000 seconds on emulator to get ready
+[DEBUG] waited 0.029000 seconds on emulator to get ready
 [INFO] Installing application on device
 [INFO] Application installed. Launch from drawer on Home Screen

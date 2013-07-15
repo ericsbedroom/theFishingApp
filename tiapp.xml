@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ti:app xmlns:ti="http://ti.appcelerator.org">
     <id>com.eric.myapp</id>
-    <name>practice</name>
+    <name>The Fishing App</name>
     <version>1.0</version>
     <publisher>Ericiscool</publisher>
     <url>http://</url>
