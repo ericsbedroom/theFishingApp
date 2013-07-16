@@ -166,10 +166,10 @@ fishDB.execute('INSERT INTO saltwaterFish (name, legalLength, maxCatch, reccomen
 
 
 var fishDBRS = fishDB.execute('SELECT name, legalLength, maxCatch, reccomendedTackle FROM saltwaterFish');
-
+fishDB.close();
 
 newCatchButton.addEventListener("click", function() {
-	alert(fishDBRS.fieldByName('name'));
+	newEntryWindow.open();
 });
 
 
@@ -224,7 +224,7 @@ var tab3 = Titanium.UI.createTab({
 
 var label3 = Titanium.UI.createLabel({
 	color:'#fff',
-	text:'This is where the community stuff is',
+	text:'I really appreciate Drew coming out and helping me make icons and logos',
 	font:{fontSize:20,fontFamily:'Helvetica Neue'},
 	textAlign:'center',
 	width:'auto'

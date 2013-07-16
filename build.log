@@ -5,14 +5,23 @@ Logfile initialized
 [DEBUG] Waiting for device to be ready ...
 [TRACE] adb devices returned 1 devices/emulators
 [DEBUG] Device connected... (waited 0 seconds)
-[DEBUG] waited 0.019000 seconds on emulator to get ready
+[DEBUG] waited 0.026000 seconds on emulator to get ready
 [DEBUG] com.eric.myapp installed? True
 [INFO] Copying CommonJS modules...
 [INFO] Copying project resources..
+[TRACE] COPYING MODIFIED FILE: C:\Users\Ericiscool\Documents\Titanium_Studio_Workspace\theFishingAppGit\Resources\android\Thumbs.db => C:\Users\Ericiscool\Documents\Titanium_Studio_Workspace\theFishingAppGit\build\android\bin\assets\Resources\Thumbs.db
 [TRACE] COPYING MODIFIED FILE: C:\Users\Ericiscool\Documents\Titanium_Studio_Workspace\theFishingAppGit\Resources\app.js => C:\Users\Ericiscool\Documents\Titanium_Studio_Workspace\theFishingAppGit\build\android\bin\assets\Resources\app.js
 [DEBUG] LiveView not enabled
 [TRACE] Generating Java Classes
 [DEBUG] Processing Android resource drawables
+[TRACE] COPYING FILE: C:\Users\Ericiscool\Documents\Titanium_Studio_Workspace\theFishingAppGit\Resources\android\images\res-long-land-hdpi\Thumbs.db => C:\Users\Ericiscool\Documents\Titanium_Studio_Workspace\theFishingAppGit\build\android\res\drawable-long-land-hdpi\thumbs_2c5499c213.db
+[TRACE] COPYING FILE: C:\Users\Ericiscool\Documents\Titanium_Studio_Workspace\theFishingAppGit\Resources\android\images\res-long-land-ldpi\Thumbs.db => C:\Users\Ericiscool\Documents\Titanium_Studio_Workspace\theFishingAppGit\build\android\res\drawable-long-land-ldpi\thumbs_2c5499c213.db
+[TRACE] COPYING FILE: C:\Users\Ericiscool\Documents\Titanium_Studio_Workspace\theFishingAppGit\Resources\android\images\res-long-port-hdpi\Thumbs.db => C:\Users\Ericiscool\Documents\Titanium_Studio_Workspace\theFishingAppGit\build\android\res\drawable-long-port-hdpi\thumbs_2c5499c213.db
+[TRACE] COPYING FILE: C:\Users\Ericiscool\Documents\Titanium_Studio_Workspace\theFishingAppGit\Resources\android\images\res-long-port-ldpi\Thumbs.db => C:\Users\Ericiscool\Documents\Titanium_Studio_Workspace\theFishingAppGit\build\android\res\drawable-long-port-ldpi\thumbs_2c5499c213.db
+[TRACE] COPYING FILE: C:\Users\Ericiscool\Documents\Titanium_Studio_Workspace\theFishingAppGit\Resources\android\images\res-notlong-land-hdpi\Thumbs.db => C:\Users\Ericiscool\Documents\Titanium_Studio_Workspace\theFishingAppGit\build\android\res\drawable-notlong-land-hdpi\thumbs_2c5499c213.db
+[TRACE] COPYING FILE: C:\Users\Ericiscool\Documents\Titanium_Studio_Workspace\theFishingAppGit\Resources\android\images\res-notlong-land-ldpi\Thumbs.db => C:\Users\Ericiscool\Documents\Titanium_Studio_Workspace\theFishingAppGit\build\android\res\drawable-notlong-land-ldpi\thumbs_2c5499c213.db
+[TRACE] COPYING FILE: C:\Users\Ericiscool\Documents\Titanium_Studio_Workspace\theFishingAppGit\Resources\android\images\res-notlong-land-mdpi\Thumbs.db => C:\Users\Ericiscool\Documents\Titanium_Studio_Workspace\theFishingAppGit\build\android\res\drawable-notlong-land-mdpi\thumbs_2c5499c213.db
+[TRACE] COPYING FILE: C:\Users\Ericiscool\Documents\Titanium_Studio_Workspace\theFishingAppGit\Resources\android\images\res-notlong-port-ldpi\Thumbs.db => C:\Users\Ericiscool\Documents\Titanium_Studio_Workspace\theFishingAppGit\build\android\res\drawable-notlong-port-ldpi\thumbs_2c5499c213.db
 [DEBUG] copying app icon: C:\Users\Ericiscool\Documents\Titanium_Studio_Workspace\theFishingAppGit\build\android\bin\assets\Resources\appicon.png
 [DEBUG] generating theme.xml
 [DEBUG] found drawable-long-land-hdpi splash screen at C:\Users\Ericiscool\Documents\Titanium_Studio_Workspace\theFishingAppGit\Resources\android\images\res-long-land-hdpi\default.png
@@ -65,14 +74,22 @@ Logfile initialized
 [DEBUG] from resource zip => AndroidManifest.xml
 [DEBUG] from resource zip => resources.arsc
 [DEBUG] from resource zip => res/drawable-long-land-hdpi/background.png
+[DEBUG] from resource zip => res/drawable-long-land-hdpi/thumbs_2c5499c213.db
 [DEBUG] from resource zip => res/drawable-long-land-ldpi/background.png
+[DEBUG] from resource zip => res/drawable-long-land-ldpi/thumbs_2c5499c213.db
 [DEBUG] from resource zip => res/drawable-long-port-hdpi/background.png
+[DEBUG] from resource zip => res/drawable-long-port-hdpi/thumbs_2c5499c213.db
 [DEBUG] from resource zip => res/drawable-long-port-ldpi/background.png
+[DEBUG] from resource zip => res/drawable-long-port-ldpi/thumbs_2c5499c213.db
 [DEBUG] from resource zip => res/drawable-notlong-land-hdpi/background.png
+[DEBUG] from resource zip => res/drawable-notlong-land-hdpi/thumbs_2c5499c213.db
 [DEBUG] from resource zip => res/drawable-notlong-land-ldpi/background.png
+[DEBUG] from resource zip => res/drawable-notlong-land-ldpi/thumbs_2c5499c213.db
 [DEBUG] from resource zip => res/drawable-notlong-land-mdpi/background.png
+[DEBUG] from resource zip => res/drawable-notlong-land-mdpi/thumbs_2c5499c213.db
 [DEBUG] from resource zip => res/drawable-notlong-port-hdpi/background.png
 [DEBUG] from resource zip => res/drawable-notlong-port-ldpi/background.png
+[DEBUG] from resource zip => res/drawable-notlong-port-ldpi/thumbs_2c5499c213.db
 [DEBUG] from resource zip => res/drawable-notlong-port-mdpi/background.png
 [DEBUG] from JAR C:\Users\Ericiscool\AppData\Roaming\Titanium\mobilesdk\win32\3.1.1.GA\android\titanium.jar => org/appcelerator/titanium/build.properties
 [DEBUG] from JAR C:\Users\Ericiscool\AppData\Roaming\Titanium\mobilesdk\win32\3.1.1.GA\android\titanium.jar => org/appcelerator/titanium/res/drawable/background.png
@@ -98,6 +115,6 @@ Logfile initialized
 [DEBUG] Waiting for device to be ready ...
 [TRACE] adb devices returned 1 devices/emulators
 [DEBUG] Device connected... (waited 0 seconds)
-[DEBUG] waited 0.026000 seconds on emulator to get ready
+[DEBUG] waited 0.030000 seconds on emulator to get ready
 [INFO] Installing application on device
 [INFO] Application installed. Launch from drawer on Home Screen
