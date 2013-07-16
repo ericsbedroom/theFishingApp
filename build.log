@@ -5,22 +5,14 @@ Logfile initialized
 [DEBUG] Waiting for device to be ready ...
 [TRACE] adb devices returned 1 devices/emulators
 [DEBUG] Device connected... (waited 0 seconds)
-[DEBUG] waited 0.025000 seconds on emulator to get ready
+[DEBUG] waited 0.019000 seconds on emulator to get ready
 [DEBUG] com.eric.myapp installed? True
 [INFO] Copying CommonJS modules...
 [INFO] Copying project resources..
-[INFO] Detected change in tiapp.xml, or assets deleted. Forcing full re-build...
-[TRACE] COPYING CREATED FILE: C:\Users\Ericiscool\Documents\Titanium_Studio_Workspace\theFishingAppGit\Resources\android\appicon.png => C:\Users\Ericiscool\Documents\Titanium_Studio_Workspace\theFishingAppGit\build\android\bin\assets\Resources\appicon.png
-[TRACE] COPYING CREATED FILE: C:\Users\Ericiscool\Documents\Titanium_Studio_Workspace\theFishingAppGit\Resources\android\default.png => C:\Users\Ericiscool\Documents\Titanium_Studio_Workspace\theFishingAppGit\build\android\bin\assets\Resources\default.png
-[TRACE] COPYING CREATED FILE: C:\Users\Ericiscool\Documents\Titanium_Studio_Workspace\theFishingAppGit\Resources\android\Thumbs.db => C:\Users\Ericiscool\Documents\Titanium_Studio_Workspace\theFishingAppGit\build\android\bin\assets\Resources\Thumbs.db
-[TRACE] COPYING CREATED FILE: C:\Users\Ericiscool\Documents\Titanium_Studio_Workspace\theFishingAppGit\Resources\app.js => C:\Users\Ericiscool\Documents\Titanium_Studio_Workspace\theFishingAppGit\build\android\bin\assets\Resources\app.js
-[TRACE] COPYING CREATED FILE: C:\Users\Ericiscool\Documents\Titanium_Studio_Workspace\theFishingAppGit\Resources\KS_nav_ui.png => C:\Users\Ericiscool\Documents\Titanium_Studio_Workspace\theFishingAppGit\build\android\bin\assets\Resources\KS_nav_ui.png
-[TRACE] COPYING CREATED FILE: C:\Users\Ericiscool\Documents\Titanium_Studio_Workspace\theFishingAppGit\Resources\KS_nav_views.png => C:\Users\Ericiscool\Documents\Titanium_Studio_Workspace\theFishingAppGit\build\android\bin\assets\Resources\KS_nav_views.png
-[TRACE] COPYING CREATED FILE: C:\Users\Ericiscool\Documents\Titanium_Studio_Workspace\theFishingAppGit\Resources\testWindow.js => C:\Users\Ericiscool\Documents\Titanium_Studio_Workspace\theFishingAppGit\build\android\bin\assets\Resources\testWindow.js
+[TRACE] COPYING MODIFIED FILE: C:\Users\Ericiscool\Documents\Titanium_Studio_Workspace\theFishingAppGit\Resources\app.js => C:\Users\Ericiscool\Documents\Titanium_Studio_Workspace\theFishingAppGit\build\android\bin\assets\Resources\app.js
 [DEBUG] LiveView not enabled
 [TRACE] Generating Java Classes
 [DEBUG] Processing Android resource drawables
-[DEBUG] app stylesheet => C:\Users\Ericiscool\Documents\Titanium_Studio_Workspace\theFishingAppGit\build\android\gen\com\eric\myapp\ApplicationStylesheet.java
 [DEBUG] copying app icon: C:\Users\Ericiscool\Documents\Titanium_Studio_Workspace\theFishingAppGit\build\android\bin\assets\Resources\appicon.png
 [DEBUG] generating theme.xml
 [DEBUG] found drawable-long-land-hdpi splash screen at C:\Users\Ericiscool\Documents\Titanium_Studio_Workspace\theFishingAppGit\Resources\android\images\res-long-land-hdpi\default.png
@@ -45,12 +37,11 @@ Logfile initialized
 [DEBUG] copying C:\Users\Ericiscool\Documents\Titanium_Studio_Workspace\theFishingAppGit\Resources\android\images\res-notlong-port-mdpi\default.png splash screen to C:\Users\Ericiscool\Documents\Titanium_Studio_Workspace\theFishingAppGit\build\android\res\drawable-notlong-port-mdpi\background.png
 [DEBUG] found splash screen at C:\Users\Ericiscool\Documents\Titanium_Studio_Workspace\theFishingAppGit\build\android\bin\assets\Resources\default.png
 [TRACE] Writing out AndroidManifest.xml
-[DEBUG] adding C:\Users\Ericiscool\Documents\Titanium_Studio_Workspace\theFishingAppGit\build\android\gen\com\eric\myapp\ApplicationStylesheet.java to javac build list
 [DEBUG] adding C:\Users\Ericiscool\Documents\Titanium_Studio_Workspace\theFishingAppGit\build\android\gen\com\eric\myapp\R.java to javac build list
 [DEBUG] adding C:\Users\Ericiscool\Documents\Titanium_Studio_Workspace\theFishingAppGit\build\android\gen\com\eric\myapp\TheFishingAppActivity.java to javac build list
 [DEBUG] adding C:\Users\Ericiscool\Documents\Titanium_Studio_Workspace\theFishingAppGit\build\android\gen\com\eric\myapp\TheFishingAppAppInfo.java to javac build list
 [DEBUG] adding C:\Users\Ericiscool\Documents\Titanium_Studio_Workspace\theFishingAppGit\build\android\gen\com\eric\myapp\TheFishingAppApplication.java to javac build list
-[DEBUG] Building Java Sources: "C:\\Users\\Ericiscool\\Documents\\Titanium_Studio_Workspace\\theFishingAppGit\\build\\android\\gen\\com\\eric\\myapp\\ApplicationStylesheet.java" "C:\\Users\\Ericiscool\\Documents\\Titanium_Studio_Workspace\\theFishingAppGit\\build\\android\\gen\\com\\eric\\myapp\\R.java" "C:\\Users\\Ericiscool\\Documents\\Titanium_Studio_Workspace\\theFishingAppGit\\build\\android\\gen\\com\\eric\\myapp\\TheFishingAppActivity.java" "C:\\Users\\Ericiscool\\Documents\\Titanium_Studio_Workspace\\theFishingAppGit\\build\\android\\gen\\com\\eric\\myapp\\TheFishingAppAppInfo.java" "C:\\Users\\Ericiscool\\Documents\\Titanium_Studio_Workspace\\theFishingAppGit\\build\\android\\gen\\com\\eric\\myapp\\TheFishingAppApplication.java"
+[DEBUG] Building Java Sources: "C:\\Users\\Ericiscool\\Documents\\Titanium_Studio_Workspace\\theFishingAppGit\\build\\android\\gen\\com\\eric\\myapp\\R.java" "C:\\Users\\Ericiscool\\Documents\\Titanium_Studio_Workspace\\theFishingAppGit\\build\\android\\gen\\com\\eric\\myapp\\TheFishingAppActivity.java" "C:\\Users\\Ericiscool\\Documents\\Titanium_Studio_Workspace\\theFishingAppGit\\build\\android\\gen\\com\\eric\\myapp\\TheFishingAppAppInfo.java" "C:\\Users\\Ericiscool\\Documents\\Titanium_Studio_Workspace\\theFishingAppGit\\build\\android\\gen\\com\\eric\\myapp\\TheFishingAppApplication.java"
 [INFO] Compiling Android Resources... This could take some time
 [DEBUG] Android classes.dex built
 [DEBUG] creating unsigned apk: C:\Users\Ericiscool\Documents\Titanium_Studio_Workspace\theFishingAppGit\build\android\bin\app-unsigned.apk
@@ -107,6 +98,6 @@ Logfile initialized
 [DEBUG] Waiting for device to be ready ...
 [TRACE] adb devices returned 1 devices/emulators
 [DEBUG] Device connected... (waited 0 seconds)
-[DEBUG] waited 0.029000 seconds on emulator to get ready
+[DEBUG] waited 0.026000 seconds on emulator to get ready
 [INFO] Installing application on device
 [INFO] Application installed. Launch from drawer on Home Screen

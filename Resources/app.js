@@ -9,8 +9,6 @@ var tabGroup = Titanium.UI.createTabGroup();
 //
 
 
-
-
 var win1 = Titanium.UI.createWindow({  
     title:'Fish Reference',
     backgroundColor:'#fff'
@@ -21,6 +19,10 @@ var tab1 = Titanium.UI.createTab({
     title:'Fish',
     window:win1
 });
+
+
+
+
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -107,6 +109,7 @@ var freshwaterSection = Titanium.UI.createListSection({
 });
 
 
+
 //loads sections into list view
 listView.sections = [saltwaterSection, freshwaterSection];
 
@@ -154,12 +157,26 @@ logWindow.add(label2);
 logWindow.add(newCatchButton);
 
 
+
+var fishDB = Titanium.Database.open("Fish");
+fishDB.execute('CREATE TABLE IF NOT EXISTS saltwaterFish(name TEXT, legalLength TEXT, maxCatch TEXT, reccomendedTackle TEXT);');
+fishDB.execute('INSERT INTO saltwaterFish (name, legalLength, maxCatch, reccomendedTackle) VALUES ("Pacific Halibut", "No minimum length.", "One fish", "Good hooks and line")');
+
+
+var fishDBRS = fishDB.execute('SELECT name, legalLength, maxCatch, reccomendedTackle FROM saltwaterFish');
+
+
 newCatchButton.addEventListener("click", function() {
-	newEntryWindow.open()
+	alert(fishDBRS.fieldByName('name'));
 });
 
 
+
+
 ////////////////////////////////////////////////////////////////
+
+
+
 
 var newEntryWindow = Ti.UI.createWindow({
 	title: "New Catch",
