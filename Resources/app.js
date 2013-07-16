@@ -157,6 +157,8 @@ logWindow.add(label2);
 logWindow.add(newCatchButton);
 
 
+////// Start Database testing portion
+
 
 var fishDB = Titanium.Database.open("Fish");
 fishDB.execute('CREATE TABLE IF NOT EXISTS saltwaterFish(name TEXT, legalLength TEXT, maxCatch TEXT, reccomendedTackle TEXT);');
@@ -171,6 +173,7 @@ newCatchButton.addEventListener("click", function() {
 });
 
 
+///end database portion
 
 
 ////////////////////////////////////////////////////////////////
