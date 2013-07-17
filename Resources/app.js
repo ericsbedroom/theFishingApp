@@ -57,24 +57,24 @@ var listView = Titanium.UI.createListView({
     defaultItemTemplate: 'plain'
 });
 
-// 
-// var refDB = Titanium.Database.install("fish", "fish");
-// 
-// var refDB = Titanium.Database.open("fish");
-// 
-// 
-// var rows = refDB.execute("SELECT name FROM freshwaterFish");
-// 
-// //list of freshwater fish
-// var freshwaterDataSet = [];
-// 
-// for (var i = 0; i < rows.rowCount; i++) {
-	// freshwaterDataSet.push({
-		// rowtitle: { text: rows.fieldByName('name')}
-	// });
-	// rows.next();
-// }
-// 
+
+var refDB = Titanium.Database.install("fish", "fish");
+
+var refDB = Titanium.Database.open("fish");
+
+
+var rows = refDB.execute("SELECT name FROM freshwaterFish");
+
+//list of freshwater fish
+var freshwaterDataSet = [];
+
+for (var i = 0; i < rows.rowCount; i++) {
+	freshwaterDataSet.push({
+		rowtitle: { text: rows.fieldByName('name')}
+	});
+	rows.next();
+}
+
 
 
 //list of salwater fish
@@ -106,15 +106,16 @@ var saltwaterSection = Titanium.UI.createListSection({
 	headerTitle: 'Saltwater',
 	items: saltwaterDataSet
 });
-// var freshwaterSection = Titanium.UI.createListSection({
-	// headerTitle: "Freshwater",
-	// items: freshwaterDataSet
-// });
+
+var freshwaterSection = Titanium.UI.createListSection({
+	headerTitle: "Freshwater",
+	items: freshwaterDataSet
+});
 
 
 
 //loads sections into list view
-listView.sections = [saltwaterSection];
+listView.sections = [saltwaterSection, freshwaterSection];
 
 //loads listview into window
 fishListWindow.add(listView);
