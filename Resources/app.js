@@ -9,19 +9,16 @@ var tabGroup = Titanium.UI.createTabGroup();
 //
 
 
-var win1 = Titanium.UI.createWindow({  
+var fishListWindow = Titanium.UI.createWindow({  
     title:'Fish Reference',
     backgroundColor:'#fff'
 });
 
-var tab1 = Titanium.UI.createTab({  
+var fishListTab = Titanium.UI.createTab({  
     icon:'KS_nav_views.png',
     title:'Fish',
-    window:win1
+    window:fishListWindow
 });
-
-
-
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -33,7 +30,7 @@ var plainTemplate = {
         {
             type: 'Ti.UI.Label', // Use a label
             bindId: 'rowtitle',  // Bind ID for this label
-            properties: {        // Sets the Label.left property
+            properties: {        
                 left: '10dp',
                 height: '50dp'
             }
@@ -47,6 +44,9 @@ function report(e) {
 }
 
 
+
+
+
 //uppermost element of list
 var listView = Titanium.UI.createListView({
 	headerTitle: 'Fish',
@@ -56,6 +56,11 @@ var listView = Titanium.UI.createListView({
     // for all data list items in this list view
     defaultItemTemplate: 'plain'
 });
+
+
+//refDB = Titanium.Database.open("fish");
+
+
 
 //list of salwater fish
 var saltwaterDataSet = [
@@ -98,6 +103,7 @@ var freshwaterDataSet = [
     { rowtitle: {text: 'Sturgeon'}, properties: { title: 'Sturgeon'} }
 ];
 
+
 //loads data sets into sections
 var saltwaterSection = Titanium.UI.createListSection({
 	headerTitle: 'Saltwater',
@@ -114,7 +120,7 @@ var freshwaterSection = Titanium.UI.createListSection({
 listView.sections = [saltwaterSection, freshwaterSection];
 
 //loads listview into window
-win1.add(listView);
+fishListWindow.add(listView);
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -133,7 +139,7 @@ var logWindow = Titanium.UI.createWindow({
     title:'Fish Log',
     backgroundColor:'#fff'
 });
-var tab2 = Titanium.UI.createTab({  
+var logWindowTab = Titanium.UI.createTab({  
     icon:'KS_nav_ui.png',
     title:'Log',
     window:logWindow
@@ -157,31 +163,8 @@ logWindow.add(label2);
 logWindow.add(newCatchButton);
 
 
-////// Start Database testing portion
 
-
-var fishDB = Titanium.Database.open("Fish");
-fishDB.execute('CREATE TABLE IF NOT EXISTS saltwaterFish(name TEXT, legalLength TEXT, maxCatch TEXT, reccomendedTackle TEXT);');
-fishDB.execute('INSERT INTO saltwaterFish (name, legalLength, maxCatch, reccomendedTackle) VALUES ("Pacific Halibut", "No minimum length.", "One fish", "Good hooks and line")');
-
-
-var fishDBRS = fishDB.execute('SELECT name, legalLength, maxCatch, reccomendedTackle FROM saltwaterFish');
-fishDB.close();
-
-newCatchButton.addEventListener("click", function() {
-	newEntryWindow.open();
-});
-
-
-///end database portion
-
-
-////////////////////////////////////////////////////////////////
-
-
-
-
-var newEntryWindow = Ti.UI.createWindow({
+var newLogEntryWindow = Ti.UI.createWindow({
 	title: "New Catch",
 	backgroundColor: "#fff"
 });
@@ -201,8 +184,8 @@ var fishButton = Ti.UI.createButton({
 	top: '80px'
 });
 
-newEntryWindow.add(fishTextField);
-newEntryWindow.add(fishButton);
+newLogEntryWindow.add(fishTextField);
+newLogEntryWindow.add(fishButton);
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -217,7 +200,7 @@ var communityWindow = Titanium.UI.createWindow({
 	backgroundColor: '#000'
 });
 
-var tab3 = Titanium.UI.createTab({
+var communityTab = Titanium.UI.createTab({
 	title: 'Community',
 	window:communityWindow
 });
@@ -272,9 +255,9 @@ button4.addEventListener('click', function() {
 //
 //  add tabs
 //
-tabGroup.addTab(tab1);  
-tabGroup.addTab(tab2); 
-tabGroup.addTab(tab3); 
+tabGroup.addTab(fishListTab);  
+tabGroup.addTab(logWindowTab); 
+tabGroup.addTab(communityTab); 
 
 
 // open tab group
