@@ -58,15 +58,40 @@ var listView = Titanium.UI.createListView({
 });
 
 
-//refDB = Titanium.Database.open("fish");
+refDB = Titanium.Database.open("fish");
+
+refDB.execute("CREATE TABLE IF NOT EXISTS fish (name TEXT)");
+refDB.execute("DELETE FROM fish");
+refDB.execute("INSERT INTO fish (name) VALUES ('Bass')");
+refDB.execute("INSERT INTO fish (name) VALUES ('Trout')");
+refDB.execute("INSERT INTO fish (name) VALUES ('Sturgeon')");
+refDB.execute("INSERT INTO fish (name) VALUES ('Eric')");
+refDB.execute("INSERT INTO fish (name) VALUES ('Drew')");
+refDB.execute("INSERT INTO fish (name) VALUES ('Fubar')");
+refDB.execute("INSERT INTO fish (name) VALUES ('Aligator')");
+refDB.execute("INSERT INTO fish (name) VALUES ('Mouse')");
+refDB.execute("INSERT INTO fish (name) VALUES ('Bahhhh')");
+refDB.execute("INSERT INTO fish (name) VALUES ('Robert')");
+
+var rows = refDB.execute("SELECT name FROM fish");
+
+//list of freshwater fish
+var freshwaterDataSet = [];
+
+for (var i = 0; i < rows.rowCount; i++) {
+	freshwaterDataSet.push({
+		rowtitle: { text: rows.fieldByName('name')}
+	});
+	rows.next();
+}
 
 
 
 //list of salwater fish
 var saltwaterDataSet = [
-    { rowtitle: {text: 'Tuna'}, properties: { title: 'Tuna'} },
-    { rowtitle: {text: 'Bass'}, properties: { title: 'Bass'} },
-    { rowtitle: {text: 'Mackeral'}, properties: { title: 'Mackeral'} },
+    { title: {text: 'Tuna'}},
+    { rowtitle: {text: 'Bass'}},
+    { rowtitle: {text: 'Mackeral'}},
     { rowtitle: {text: 'Albacore'}, properties: { title: 'Albacore'} },
     { rowtitle: {text: 'Barracuda'}, properties: { title: 'Barracuda'} },
     { rowtitle: {text: 'Bluefish'}, properties: { title: 'Bluefish'} },
@@ -83,24 +108,6 @@ var saltwaterDataSet = [
     { rowtitle: {text: 'Croaker'}, properties: { title: 'Croaker'} },
     { rowtitle: {text: 'Flounder'}, properties: { title: 'Flounder'} }
     
-];
-
-//list of freshwater fish
-var freshwaterDataSet = [
-    { rowtitle: {text: 'Trout'}, properties: { title: 'Trout'} },
-    { rowtitle: {text: 'Salmon'}, properties: { title: 'Salmon'} },
-    { rowtitle: {text: 'Catfish'}, properties: { title: 'Catfish'} },
-    { rowtitle: {text: 'Walleye Pike'}, properties: { title: 'Walleye Pike'} },
-    { rowtitle: {text: 'Rock Bass'}, properties: { title: 'Rock Bass'} },
-    { rowtitle: {text: 'Carp'}, properties: { title: 'Carp'} },
-    { rowtitle: {text: 'Sturgeon'}, properties: { title: 'Sturgeon'} },
-    { rowtitle: {text: 'Trout'}, properties: { title: 'Trout'} },
-    { rowtitle: {text: 'Salmon'}, properties: { title: 'Salmon'} },
-    { rowtitle: {text: 'Catfish'}, properties: { title: 'Catfish'} },
-    { rowtitle: {text: 'Walleye Pike'}, properties: { title: 'Walleye Pike'} },
-    { rowtitle: {text: 'Rock Bass'}, properties: { title: 'Rock Bass'} },
-    { rowtitle: {text: 'Carp'}, properties: { title: 'Carp'} },
-    { rowtitle: {text: 'Sturgeon'}, properties: { title: 'Sturgeon'} }
 ];
 
 
