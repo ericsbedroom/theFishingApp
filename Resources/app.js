@@ -57,34 +57,24 @@ var listView = Titanium.UI.createListView({
     defaultItemTemplate: 'plain'
 });
 
-
-refDB = Titanium.Database.open("fish");
-
-refDB.execute("CREATE TABLE IF NOT EXISTS fish (name TEXT)");
-refDB.execute("DELETE FROM fish");
-refDB.execute("INSERT INTO fish (name) VALUES ('Bass')");
-refDB.execute("INSERT INTO fish (name) VALUES ('Trout')");
-refDB.execute("INSERT INTO fish (name) VALUES ('Sturgeon')");
-refDB.execute("INSERT INTO fish (name) VALUES ('Eric')");
-refDB.execute("INSERT INTO fish (name) VALUES ('Drew')");
-refDB.execute("INSERT INTO fish (name) VALUES ('Fubar')");
-refDB.execute("INSERT INTO fish (name) VALUES ('Aligator')");
-refDB.execute("INSERT INTO fish (name) VALUES ('Mouse')");
-refDB.execute("INSERT INTO fish (name) VALUES ('Bahhhh')");
-refDB.execute("INSERT INTO fish (name) VALUES ('Robert')");
-
-var rows = refDB.execute("SELECT name FROM fish");
-
-//list of freshwater fish
-var freshwaterDataSet = [];
-
-for (var i = 0; i < rows.rowCount; i++) {
-	freshwaterDataSet.push({
-		rowtitle: { text: rows.fieldByName('name')}
-	});
-	rows.next();
-}
-
+// 
+// var refDB = Titanium.Database.install("fish", "fish");
+// 
+// var refDB = Titanium.Database.open("fish");
+// 
+// 
+// var rows = refDB.execute("SELECT name FROM freshwaterFish");
+// 
+// //list of freshwater fish
+// var freshwaterDataSet = [];
+// 
+// for (var i = 0; i < rows.rowCount; i++) {
+	// freshwaterDataSet.push({
+		// rowtitle: { text: rows.fieldByName('name')}
+	// });
+	// rows.next();
+// }
+// 
 
 
 //list of salwater fish
@@ -116,15 +106,15 @@ var saltwaterSection = Titanium.UI.createListSection({
 	headerTitle: 'Saltwater',
 	items: saltwaterDataSet
 });
-var freshwaterSection = Titanium.UI.createListSection({
-	headerTitle: "Freshwater",
-	items: freshwaterDataSet
-});
+// var freshwaterSection = Titanium.UI.createListSection({
+	// headerTitle: "Freshwater",
+	// items: freshwaterDataSet
+// });
 
 
 
 //loads sections into list view
-listView.sections = [saltwaterSection, freshwaterSection];
+listView.sections = [saltwaterSection];
 
 //loads listview into window
 fishListWindow.add(listView);
