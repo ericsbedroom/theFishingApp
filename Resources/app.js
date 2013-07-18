@@ -74,8 +74,6 @@ for (var i = 0; i < rows.rowCount; i++) {
 }
 
 
-
-
 //loads data sets into sections
 var saltwaterSection = Titanium.UI.createListSection({
 	headerTitle: 'Saltwater',
