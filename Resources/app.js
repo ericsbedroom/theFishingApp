@@ -204,25 +204,6 @@ newLogEntryWindow.add(fishButton);
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
-var communityWindow = Titanium.UI.createWindow({
-	title: 'Community Log',
-	backgroundColor: '#000'
-});
-
-var communityTab = Titanium.UI.createTab({
-	title: 'Community',
-	window:communityWindow
-});
-
-var label3 = Titanium.UI.createLabel({
-	color:'#fff',
-	text:'I really appreciate Drew coming out and helping me make icons and logos',
-	font:{fontSize:20,fontFamily:'Helvetica Neue'},
-	textAlign:'center',
-	width:'auto'
-});
-
-communityWindow.add(label3);
 
 //
 //  add tabs
@@ -230,7 +211,6 @@ communityWindow.add(label3);
 tabGroup.addTab(fishListTab);  
 tabGroup.addTab(logWindowTab);
 tabGroup.addTab(tackleBoxTab); 
-tabGroup.addTab(communityTab); 
 // open tab group
 tabGroup.open();
 
