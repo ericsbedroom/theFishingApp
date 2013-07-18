@@ -7,8 +7,6 @@ var tabGroup = Titanium.UI.createTabGroup();
 //
 // create base UI tab and root window
 //
-
-
 var fishListWindow = Titanium.UI.createWindow({  
     title:'Fish Reference',
     backgroundColor:'#fff'
@@ -19,11 +17,8 @@ var fishListTab = Titanium.UI.createTab({
     title:'Fish',
     window:fishListWindow
 });
-
-
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
 //creates template for rows
 var plainTemplate = {
     childTemplates: [
@@ -38,15 +33,9 @@ var plainTemplate = {
     ]
 };
 
-
 function report(e) {
 	Ti.API.info(e.type);
 }
-
-
-
-
-
 //uppermost element of list
 var listView = Titanium.UI.createListView({
 	headerTitle: 'Fish',
@@ -58,15 +47,16 @@ var listView = Titanium.UI.createListView({
 });
 
 
-var refDB = Titanium.Database.install("fish", "fish");
-
-var refDB = Titanium.Database.open("fish");
+var refDB = Ti.Database.open("fish")
+refDB.remove();
+refDB = Titanium.Database.install("fish.sqlite", "fish");
 
 
 var rows = refDB.execute("SELECT name FROM freshwaterFish");
-
 //list of freshwater fish
+
 var freshwaterDataSet = [];
+var saltwaterDataSet = [];
 
 for (var i = 0; i < rows.rowCount; i++) {
 	freshwaterDataSet.push({
@@ -75,30 +65,15 @@ for (var i = 0; i < rows.rowCount; i++) {
 	rows.next();
 }
 
+rows = refDB.execute("SELECT name FROM saltwaterFish");
+for (var i = 0; i < rows.rowCount; i++) {
+	saltwaterDataSet.push({
+		rowtitle: { text: rows.fieldByName('name')}
+	});
+	rows.next();
+}
 
 
-//list of salwater fish
-var saltwaterDataSet = [
-    { title: {text: 'Tuna'}},
-    { rowtitle: {text: 'Bass'}},
-    { rowtitle: {text: 'Mackeral'}},
-    { rowtitle: {text: 'Albacore'}, properties: { title: 'Albacore'} },
-    { rowtitle: {text: 'Barracuda'}, properties: { title: 'Barracuda'} },
-    { rowtitle: {text: 'Bluefish'}, properties: { title: 'Bluefish'} },
-    { rowtitle: {text: 'Cod'}, properties: { title: 'Cod'} },
-    { rowtitle: {text: 'Croaker'}, properties: { title: 'Croaker'} },
-    { rowtitle: {text: 'Flounder'}, properties: { title: 'Flounder'} },
-    { rowtitle: {text: 'Tuna'}, properties: { title: 'Tuna'} },
-    { rowtitle: {text: 'Bass'}, properties: { title: 'Bass'} },
-    { rowtitle: {text: 'Mackeral'}, properties: { title: 'Mackeral'} },
-    { rowtitle: {text: 'Albacore'}, properties: { title: 'Albacore'} },
-    { rowtitle: {text: 'Barracuda'}, properties: { title: 'Barracuda'} },
-    { rowtitle: {text: 'Bluefish'}, properties: { title: 'Bluefish'} },
-    { rowtitle: {text: 'Cod'}, properties: { title: 'Cod'} },
-    { rowtitle: {text: 'Croaker'}, properties: { title: 'Croaker'} },
-    { rowtitle: {text: 'Flounder'}, properties: { title: 'Flounder'} }
-    
-];
 
 
 //loads data sets into sections
@@ -157,6 +132,12 @@ var newCatchButton = Titanium.UI.createButton({
 	top: "10px"
 });
 
+
+newCatchButton.addEventListener('click', function() {
+	newLogEntryWindow.open();
+});
+
+
 logWindow.add(label2);
 logWindow.add(newCatchButton);
 
@@ -182,8 +163,40 @@ var fishButton = Ti.UI.createButton({
 	top: '80px'
 });
 
+////////////////////
+
+var newCatchBackButton = Titanium.UI.createButton({
+	title: "back",
+	width: 100,
+	height: 50,
+	right: "10px",
+	top: "10px",
+});
+
+newCatchBackButton.addEventListener('click', function() {
+	newLogEntryWindow.close();
+});
+
+newLogEntryWindow.add(newCatchBackButton);
+
+///
+var TackleBoxWindow = Titanium.UI.createWindow({  
+    title:'Virtual Tackle Box',
+    backgroundColor:'#fff'
+});
+
+var tackleBoxTab = Titanium.UI.createTab({  
+    icon:'KS_nav_views.png',
+    title:'Tackle Box',
+    window:TackleBoxWindow
+});
+///
+
+
+////////////////////
 newLogEntryWindow.add(fishTextField);
 newLogEntryWindow.add(fishButton);
+
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -213,58 +226,15 @@ var label3 = Titanium.UI.createLabel({
 
 communityWindow.add(label3);
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-var win4 = Titanium.UI.createWindow({  
-    title:'This means it is working!',
-    backgroundColor:'#ccc'
-});
-
-var label4 = Titanium.UI.createLabel({
-	color:'#000',
-	text:'my new window!! This is where the fish info will go',
-	font:{fontSize:20,fontFamily:'Helvetica Neue'},
-	textAlign:'center',
-	width:'auto'
-});
-
-var button4 = Titanium.UI.createButton({
-	title: 'Go Back',
-	width: 100,
-	height: 50,
-	right: '10px',
-	top: '10px'
-});
-
-//adds label and button to fish window
-win4.add(label4);
-win4.add(button4);
-
-//closes window when button is clicked
-button4.addEventListener('click', function() {
-	win4.close()
-});
-
 //
 //  add tabs
 //
 tabGroup.addTab(fishListTab);  
-tabGroup.addTab(logWindowTab); 
+tabGroup.addTab(logWindowTab);
+tabGroup.addTab(tackleBoxTab); 
 tabGroup.addTab(communityTab); 
-
-
 // open tab group
 tabGroup.open();
 
-//opens fish window when any list item is clicked
-listView.addEventListener('itemclick', function() {
-	win4.open()
-});
-	
 
 
