@@ -115,7 +115,7 @@ var logWindowTab = Titanium.UI.createTab({
     title:'Log',
     window:logWindow
 });
-var label2 = Titanium.UI.createLabel({
+var logLabel = Titanium.UI.createLabel({
 	color:'#999',
 	text:'This is where the log goes',
 	font:{fontSize:20,fontFamily:'Helvetica Neue'},
@@ -136,7 +136,7 @@ newCatchButton.addEventListener('click', function() {
 });
 
 
-logWindow.add(label2);
+logWindow.add(logLabel);
 logWindow.add(newCatchButton);
 
 
@@ -176,9 +176,12 @@ newCatchBackButton.addEventListener('click', function() {
 });
 
 newLogEntryWindow.add(newCatchBackButton);
+newLogEntryWindow.add(fishTextField);
+newLogEntryWindow.add(fishButton);
 
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///
-var TackleBoxWindow = Titanium.UI.createWindow({  
+var tackleBoxWindow = Titanium.UI.createWindow({  
     title:'Virtual Tackle Box',
     backgroundColor:'#fff'
 });
@@ -186,16 +189,65 @@ var TackleBoxWindow = Titanium.UI.createWindow({
 var tackleBoxTab = Titanium.UI.createTab({  
     icon:'KS_nav_views.png',
     title:'Tackle Box',
-    window:TackleBoxWindow
+    window:tackleBoxWindow
 });
 ///
 
+var newRodButton = Titanium.UI.createButton({
+	title: "rod",
+	width: 100, height: 50,
+	top:10, left: 10
+});
 
-////////////////////
-newLogEntryWindow.add(fishTextField);
-newLogEntryWindow.add(fishButton);
+var newReelButton = Titanium.UI.createButton({
+	title: "reel",
+	width: 100, height: 50,
+	top:10, left: 120
+});
+
+var newLineButton = Titanium.UI.createButton({
+	title: "line",
+	width: 100, height: 50,
+	top:10, left: 230
+});
+
+var newHookButton = Titanium.UI.createButton({
+	title: "hook",
+	width: 100, height: 50,
+	top:10, left: 340
+});
+
+tackleBoxWindow.add(newRodButton);
+tackleBoxWindow.add(newHookButton);
+tackleBoxWindow.add(newLineButton);
+tackleBoxWindow.add(newReelButton);
 
 
+var newReelWindow = Titanium.UI.createWindow({
+	backgroundColor: '#BBB',
+	title: "Add a new reel"
+});
+
+var newReelBrandPicker = Titanium.UI.createPicker({
+	top: 30
+});
+
+var newReelBrandPickerRows = [];
+newReelBrandPickerRows.push(Ti.UI.createPickerRow({title: 'Shimano'}));
+newReelBrandPickerRows.push(Ti.UI.createPickerRow({title: 'Abu Garcia'}));
+newReelBrandPickerRows.push(Ti.UI.createPickerRow({title: 'Eagle Claw'}));
+newReelBrandPickerRows.push(Ti.UI.createPickerRow({title: 'Penn'}));
+
+newReelBrandPicker.add(newReelBrandPickerRows);
+newReelWindow.add(newReelBrandPicker);
+
+newReelButton.addEventListener('click', function() {
+	newReelWindow.open({modal:true})
+});
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
