@@ -232,6 +232,8 @@ var newReelBrandPicker = Titanium.UI.createPicker({
 	top: 30
 });
 
+
+
 var newReelBrandPickerRows = [];
 newReelBrandPickerRows.push(Ti.UI.createPickerRow({title: 'Shimano'}));
 newReelBrandPickerRows.push(Ti.UI.createPickerRow({title: 'Abu Garcia'}));
